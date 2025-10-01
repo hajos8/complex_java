@@ -6,7 +6,7 @@
 
 package org.example;
 
-class Complex {
+public class Complex {
     double real;
     double imag;
 
