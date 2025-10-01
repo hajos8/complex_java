@@ -15,6 +15,37 @@ class Complex {
         this.imag = imag;
     }
 
+    /**
+     * Constructor receiving a complex number as string
+     *
+     * @param zStr "a+bi" format
+     */
+    public Complex(String zStr) {
+        // "1+2i"
+
+        String plus = "+";
+        String[] split;
+
+        if(zStr.lastIndexOf("+") > zStr.lastIndexOf("-")){
+            split = zStr.replace('+', 'P').split("P");
+        }
+        else{
+            split = zStr.split("-");
+        }
+
+        real = Double.parseDouble(split[0]);
+
+
+        //TODO fix negative imaginary part
+        String split2 = "";
+
+        for(int i=1; i<split.length-1; i++){
+            split2 += split[i];
+        }
+
+        imag = Double.parseDouble(split2);
+    }
+
 
     public double getImag() {
         return imag;
