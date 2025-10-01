@@ -1,10 +1,12 @@
-/*
-* @author: cigany
-*
-*
-*/
-
 package org.example;
+
+/*
+*  Complex class implementing basic operations
+*
+*  @author András Rabb
+*  @version 1.0
+*  @since 2025-10-01
+*/
 
 public class Complex {
     double real;
@@ -18,6 +20,9 @@ public class Complex {
     /**
      * Constructor receiving a complex number as string
      *
+     * @author András Rabb
+     * @description Potentially buggy
+     * @since 2025-10-01
      * @param zStr "a+bi" format
      */
     public Complex(String zStr) {
