@@ -23,7 +23,6 @@ class Complex {
     public Complex(String zStr) {
         // "1+2i"
 
-        String plus = "+";
         String[] split;
 
         if(zStr.lastIndexOf("+") > zStr.lastIndexOf("-")){
@@ -37,13 +36,8 @@ class Complex {
 
 
         //TODO fix negative imaginary part
-        String split2 = "";
 
-        for(int i=1; i<split.length-1; i++){
-            split2 += split[i];
-        }
-
-        imag = Double.parseDouble(split2);
+        imag = Double.parseDouble(split[1].replace("i", ""));
     }
 
 
