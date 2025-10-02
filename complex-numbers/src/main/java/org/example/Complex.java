@@ -32,17 +32,20 @@ public class Complex {
 
         if(zStr.lastIndexOf("+") > zStr.lastIndexOf("-")){
             split = zStr.replace('+', 'P').split("P");
+
+            real = Double.parseDouble(split[0]);
+            imag = Double.parseDouble(split[1].replace("i", ""));
         }
         else{
-            split = zStr.split("-");
+            split = zStr.replace('-', 'M').split("M");
+
+            real = Double.parseDouble(split[0]);
+            imag = Double.parseDouble("-" + split[1].replace("i", ""));
         }
 
-        real = Double.parseDouble(split[0]);
 
 
-        //TODO fix negative imaginary part
-
-        imag = Double.parseDouble(split[1].replace("i", ""));
+        System.out.println(real + " " + imag);
     }
 
 
